@@ -1,27 +1,76 @@
-# GestionStockFrontEnd
+# Symfony 7 and Angular Full Stack Product Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+## Description
 
-## Development server
+This is a full stack web application built with Symfony 7 and Angular. The application allows you to store, retrieve, edit, and find products in a database using an API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Store products
+- Retrieve products
+- Edit products
+- Delete products
+- List all products
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+### Backend (Symfony)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/your-repo/symfony-angular-product-app.git
+    ```
+2. Navigate to the backend directory:
+    ```sh
+    cd symfony-angular-product-app/backend
+    ```
+3. Install the dependencies:
+    ```sh
+    composer install
+    ```
+4. Set up the database:
+    ```sh
+    php bin/console doctrine:database:create
+    php bin/console doctrine:schema:update --force
+    ```
+5. Start the Symfony server:
+    ```sh
+    symfony server:start
+    ```
 
-## Running unit tests
+### Frontend (Angular)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Navigate to the frontend directory:
+    ```sh
+    cd ../frontend
+    ```
+2. Install the dependencies:
+    ```sh
+    npm install
+    ```
+3. Start the Angular development server:
+    ```sh
+    ng serve
+    ```
 
-## Running end-to-end tests
+## Usage
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Open your web browser and navigate to `http://localhost:4200/products` to view the list of products.
+2. Use the form to add a new product or edit an existing product.
+3. Click the delete button to remove a product from the list.
 
-## Further help
+## API Endpoints
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `GET /api/products`: Retrieve a list of products.
+- `GET /api/products/{id}`: Retrieve a specific product by ID.
+- `POST /api/products`: Create a new product.
+- `PUT /api/products/{id}`: Update an existing product.
+- `DELETE /api/products/{id}`: Delete a product.
+
+## Credits
+
+Created by Med Amine Marzouk - enseignant - Ingenieur informatique
+
+## License
+
+This project is licensed under the MIT License.
